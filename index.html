@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LeverageStack | Scaling Business Leverage</title>
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48' fill='none'%3E%3Cpath d='M42.1739 20.1739L27.8261 5.82609C29.1366 7.13663 28.3989 10.1876 26.2002 13.7654C24.8538 15.9564 22.9595 18.3449 20.6522 20.6522C18.3449 22.9595 15.9564 24.8538 13.7654 26.2002C10.1876 28.3989 7.13663 29.1366 5.82609 27.8261L20.1739 42.1739C21.4845 43.4845 24.5355 42.7467 28.1133 40.548C30.3042 39.2016 32.6927 37.3073 35 35C37.3073 32.6927 39.2016 30.4042 40.548 28.1133C42.7467 24.5355 43.4845 21.4845 42.1739 20.1739Z' fill='%23a87f43'/%3E%3C/svg%3E" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              emerald: {
+                950: '#020706', // Deeper black for more sophistication
+                900: '#04110f',
+                800: '#061a18',
+              },
+              bronze: {
+                DEFAULT: '#cd7f32',
+                metallic: '#b8860b', // Slightly more 'Gold Leaf' 
+              },
+              cream: {
+                DEFAULT: '#fdfbf7',
+              }
+            },
+            fontFamily: {
+              serif: ['"Playfair Display"', 'serif'],
+              sans: ['Satoshi', '"Satoshi Placeholder"', 'Inter', 'sans-serif'],
+            },
+            animation: {
+              'reveal': 'revealUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+              'bounce-weightless': 'bounceWeightless 4s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite',
+            },
+            keyframes: {
+              revealUp: {
+                '0%': { opacity: '0', transform: 'translateY(30px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              bounceWeightless: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #020706;
+        color: #fdfbf7;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+        font-family: 'Satoshi', 'Inter', sans-serif;
+      }
+      
+      /* Editorial Typographic System */
+      .text-h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 10vw, 8rem); line-height: 1; letter-spacing: -0.02em; }
+      .text-h2 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 8vw, 6rem); line-height: 1.1; letter-spacing: -0.01em; }
+      .text-h3 { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 5vw, 3.5rem); line-height: 1.2; }
+      
+      .text-meta { font-family: 'Satoshi', 'Inter', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.4em; text-transform: uppercase; color: #b8860b; }
+      .text-body-pro { font-family: 'Satoshi', 'Inter', sans-serif; font-size: 1.125rem; font-weight: 300; line-height: 1.7; color: rgba(253, 251, 247, 0.5); }
+      
+      .hairline { border: 0.5px solid rgba(253, 251, 247, 0.08); }
+      .hairline-b { border-bottom: 0.5px solid rgba(253, 251, 247, 0.08); }
+      .hairline-t { border-top: 0.5px solid rgba(253, 251, 247, 0.08); }
+      .hairline-l { border-left: 0.5px solid rgba(253, 251, 247, 0.08); }
+      
+      ::-webkit-scrollbar { width: 4px; }
+      ::-webkit-scrollbar-track { background: #020706; }
+      ::-webkit-scrollbar-thumb { background: #b8860b; }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
