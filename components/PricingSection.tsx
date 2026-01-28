@@ -8,9 +8,9 @@ const PricingSection: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         <ScrollReveal>
           <div className="text-center mb-32">
-            <span className="text-meta mb-6 block">The Engagement</span>
+            <span className="text-meta mb-6 block">THE ENGAGEMENT</span>
             <h2 className="text-h2 text-cream mb-10">
-              High-End Engagement.
+              High-end engagement.
             </h2>
             <p className="text-body-pro max-w-xl mx-auto">
               We offer three tiers based on your current scale. All engagements include ghostwriting as the foundation—AI automation is layered on top.
@@ -73,12 +73,12 @@ const PricingSection: React.FC = () => {
 
         <ScrollReveal>
           <div className="mt-40 text-center">
-            <h3 className="text-h3 text-cream mb-12">Stop Being the Constraint.</h3>
+            <h3 className="text-h3 text-cream mb-12">Stop being the constraint.</h3>
             <button
               onClick={(e) => { e.preventDefault(); scrollToSection(BOOKING_LINK); }}
               className="group relative px-16 py-7 bg-transparent border border-bronze-metallic/40 text-bronze-metallic font-bold uppercase tracking-[0.4em] text-[10px] transition-all duration-500 hover:bg-bronze-metallic hover:text-emerald-950 hover:border-bronze-metallic rounded-none focus-visible:ring-2 focus-visible:ring-bronze-metallic outline-none"
             >
-              Book Your Strategy Call
+              Book a call
             </button>
           </div>
         </ScrollReveal>
@@ -102,8 +102,8 @@ const PricingPanel: React.FC<{ title: string; tag: string; whoFor: string; deliv
     )}
 
     <div className="mb-16 relative z-10">
-      <span className="text-meta !text-[10px] !text-bronze-metallic/60 mb-8 block uppercase tracking-[0.4em] font-sans">{tag}</span>
-      <h3 className="text-h3 text-cream text-4xl lg:text-5xl mb-8 font-serif font-black tracking-tight uppercase leading-none">{title}</h3>
+      <span className="text-meta !text-[10px] !text-bronze-metallic/60 mb-6 block uppercase tracking-[0.4em] font-sans">{tag}</span>
+      <h3 className="text-h3 text-cream text-3xl lg:text-4xl mb-6 font-sans font-black tracking-tight uppercase leading-none">{title}</h3>
       <p className="text-body-pro text-[15px] leading-relaxed min-h-[70px] font-sans text-cream/50 group-hover:text-cream/80 transition-colors">{whoFor}</p>
     </div>
 

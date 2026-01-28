@@ -26,7 +26,7 @@ const ProcessStory: React.FC = () => {
                             Your expertise, captured and clarified.
                         </p>
                         <p className="text-meta !text-[11px] !text-white/40 leading-relaxed max-w-xs">
-                            We extract how you think, explain, and sell — and turn it into written assets.
+                            We extract how you think, explain, and sell — then turn it into written assets that work without you.
                         </p>
                     </div>
 

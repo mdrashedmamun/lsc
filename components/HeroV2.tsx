@@ -83,7 +83,7 @@ const HeroV2: React.FC = () => {
                     </div>
 
                     {/* THE SEPARATOR (Horizon Line) */}
-                    <div className="opacity-0 animate-reveal [animation-delay:600ms] w-full flex flex-col items-center my-20 md:my-28">
+                    <div className="opacity-0 animate-reveal [animation-delay:600ms] w-full flex flex-col items-center my-10 md:my-14">
                         <div className="h-px w-full max-w-[300px] bg-gradient-to-r from-transparent via-bronze-metallic/40 to-transparent"></div>
                     </div>
 
@@ -108,7 +108,7 @@ const HeroV2: React.FC = () => {
                         onClick={(e) => { e.preventDefault(); scrollToSection(BOOKING_LINK); }}
                         className="group relative px-16 py-7 bg-transparent border border-bronze-metallic/30 text-bronze-metallic font-bold uppercase tracking-[0.4em] text-[10px] transition-all duration-500 hover:bg-bronze-metallic hover:text-emerald-950 hover:border-bronze-metallic rounded-none focus-visible:ring-2 focus-visible:ring-bronze-metallic outline-none"
                     >
-                        Start Your Extraction
+                        Book a call
                     </a>
                 </div>
             </div>

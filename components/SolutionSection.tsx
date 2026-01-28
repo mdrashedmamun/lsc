@@ -16,6 +16,13 @@ const SolutionSection: React.FC = () => {
           </div>
         </ScrollReveal>
 
+        {/* BRIDGING HEADLINE */}
+        <ScrollReveal>
+          <div className="text-center mb-24">
+            <h3 className="text-h3 text-cream/80">Here's what replaces the ceiling.</h3>
+          </div>
+        </ScrollReveal>
+
         {/* THREE STAGES OF LEVERAGE - Editorial Grid */}
         <div className="grid grid-cols-1 hairline-t">
 
@@ -90,14 +97,14 @@ const SolutionSection: React.FC = () => {
           <div className="mt-56 p-20 md:p-32 hairline bg-white/[0.01] text-center relative group">
             <div className="absolute top-0 left-0 w-full h-full bg-bronze-metallic/[0.02] opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
             <h3 className="text-h2 !text-3xl md:!text-6xl text-cream mb-16 relative z-10">
-              Stop Being the <br className="hidden md:block" /> <span>Constraint.</span>
+              Stop being the <br className="hidden md:block" /> <span>constraint.</span>
             </h3>
             <a
               href={BOOKING_LINK}
               onClick={(e) => { e.preventDefault(); scrollToSection(BOOKING_LINK); }}
               className="relative z-10 inline-block px-14 py-7 bg-transparent border border-bronze-metallic text-bronze-metallic font-bold uppercase tracking-[0.4em] text-[10px] transition-all hover:bg-bronze-metallic hover:text-emerald-950"
             >
-              Book Your Strategy Call
+              Book a call
             </a>
           </div>
         </ScrollReveal>
