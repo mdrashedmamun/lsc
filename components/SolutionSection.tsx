@@ -28,7 +28,7 @@ const SolutionSection: React.FC = () => {
               </div>
               <div className="lg:col-span-8 p-12 md:p-16 flex items-center">
                 <p className="text-body-pro max-w-2xl">
-                  We capture the logic that actually closes your deals through a focused extraction interview. This raw thinking becomes the source code for every asset we build.
+                  We capture the logic you use to explain, persuade, and close deals through a focused extraction interview. This becomes the foundation for every email and system we build.
                 </p>
               </div>
             </div>
@@ -45,13 +45,13 @@ const SolutionSection: React.FC = () => {
                 <div className="p-12 md:p-16 hairline-r last:border-r-0">
                   <h4 className="text-meta !text-white/30 mb-6">Ghostwriting</h4>
                   <p className="text-body-pro text-base leading-relaxed">
-                    We turn your frameworks into authoritative content that pre-sells prospects before you ever speak to them.
+                    We turn your thinking into authoritative email content that educates prospects before they ever speak to you.
                   </p>
                 </div>
                 <div className="p-12 md:p-16">
-                  <h4 className="text-meta !text-white/30 mb-6">AI Execution</h4>
+                  <h4 className="text-meta !text-white/30 mb-6">AI-Driven Support</h4>
                   <p className="text-body-pro text-base leading-relaxed">
-                    We build autonomous workflows that handle qualification, routing, and follow-ups so deals keep moving without you.
+                    We design and implement AI workflows for qualification, routing, and follow-ups—so deals don't stall and you're not the one pushing every step.
                   </p>
                 </div>
               </div>
@@ -63,21 +63,21 @@ const SolutionSection: React.FC = () => {
             <div className="grid grid-cols-1 lg:grid-cols-12">
               <div className="lg:col-span-4 p-12 md:p-16 hairline-r flex flex-col justify-between">
                 <span className="text-meta mb-12 block">03 / Multiplier</span>
-                <h3 className="text-h2 !text-3xl md:!text-5xl text-cream">Compounding <br className="hidden md:block" /> Yield</h3>
+                <h3 className="text-h2 !text-3xl md:!text-5xl text-cream">Compounding <br className="hidden md:block" /> Leverage</h3>
               </div>
               <div className="lg:col-span-8 p-12 md:p-16 flex flex-col justify-center">
                 <p className="text-h3 !text-2xl md:!text-4xl text-cream/80 mb-10 leading-tight">
-                  Authority brings prospects in. <br className="hidden md:block" />
-                  <span className="text-bronze-metallic">Systems move them forward.</span>
+                  Authority brings the right prospects in. <br className="hidden md:block" />
+                  <span className="text-bronze-metallic">Systems keep deals moving forward.</span>
                 </p>
                 <div className="flex gap-10">
                   <div className="flex items-center gap-3">
                     <span className="w-1.5 h-1.5 rounded-full bg-bronze-metallic"></span>
-                    <span className="text-meta !text-[8px] !text-white/40">Zero Drift</span>
+                    <span className="text-meta !text-[8px] !text-white/40">Less Repetition</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="w-1.5 h-1.5 rounded-full bg-bronze-metallic"></span>
-                    <span className="text-meta !text-[8px] !text-white/40">Infinite Scale</span>
+                    <span className="text-meta !text-[8px] !text-white/40">Less Founder Involvement</span>
                   </div>
                 </div>
               </div>
