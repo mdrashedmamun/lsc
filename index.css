@@ -1,0 +1,10 @@
+/* Main CSS entry point */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-emerald-950 text-cream antialiased selection:bg-bronze selection:text-emerald-950;
+  }
+}

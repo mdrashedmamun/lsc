@@ -15,7 +15,7 @@ const Hero: React.FC = () => {
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center pt-32 pb-24 overflow-hidden bg-emerald-950">
       {/* Subtle Depth Overlay */}
-      <div 
+      <div
         className="absolute inset-0 pointer-events-none"
         style={{ transform: `translateY(${scrollY * 0.1}px)` }}
       >
@@ -33,7 +33,7 @@ const Hero: React.FC = () => {
               Your Expertise
             </span>
             <span className="text-h1 text-cream">
-              Shouldn’t Be <span className="italic font-light">The Bottleneck.</span>
+              Shouldn’t Be The Bottleneck.
             </span>
             <div className="h-px w-24 bg-bronze-metallic/30 my-10"></div>
             <span className="text-h1 text-bronze-metallic">
@@ -49,16 +49,16 @@ const Hero: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center opacity-0 animate-reveal [animation-delay:1000ms]">
-          <a 
-            href={BOOKING_LINK} 
+          <a
+            href={BOOKING_LINK}
             onClick={(e) => { e.preventDefault(); scrollToSection(BOOKING_LINK); }}
-            className="group relative px-14 py-6 bg-transparent border border-bronze-metallic/40 text-bronze-metallic font-semibold uppercase tracking-[0.3em] text-[10px] transition-all duration-500 hover:bg-bronze-metallic hover:text-emerald-950 hover:border-bronze-metallic rounded-none"
+            className="group relative px-14 py-6 bg-transparent border border-bronze-metallic/40 text-bronze-metallic font-semibold uppercase tracking-[0.3em] text-[10px] transition-all duration-500 hover:bg-bronze-metallic hover:text-emerald-950 hover:border-bronze-metallic rounded-none focus-visible:ring-2 focus-visible:ring-bronze-metallic outline-none"
           >
             Start Your Extraction
           </a>
         </div>
       </div>
-      
+
       {/* Editorial Decorative Line */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-px h-32 bg-gradient-to-b from-transparent to-white/10"></div>
     </section>

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-// SET YOUR CALENDLY LINK HERE
+// SET YOUR LINKS HERE
 export const BOOKING_LINK = "https://calendly.com/rashed-mamun303/ls";
+export const LINKEDIN_LINK = "https://www.linkedin.com/in/rashedmamun/";
 
 export const scrollToSection = (target: string) => {
   // Robust check: If target is a URL, open it. If it's an ID, scroll to it.
@@ -69,21 +70,22 @@ const Navbar: React.FC = () => {
           </div>
 
           <nav className="hidden lg:flex items-center gap-10">
-            <a href="#services" onClick={(e) => handleNavClick(e, '#services')} className="text-xs font-bold uppercase tracking-widest text-cream/60 hover:text-bronze-metallic transition-colors">Services</a>
-            <a href="#the-process" onClick={(e) => handleNavClick(e, '#the-process')} className="text-xs font-bold uppercase tracking-widest text-cream/60 hover:text-bronze-metallic transition-colors">The Process</a>
+            <a href="#services" onClick={(e) => handleNavClick(e, '#services')} className="text-xs font-bold uppercase tracking-widest text-cream/60 hover:text-bronze-metallic transition-colors focus-visible:ring-2 focus-visible:ring-bronze-metallic outline-none">Engagement</a>
+            <a href="#the-process" onClick={(e) => handleNavClick(e, '#the-process')} className="text-xs font-bold uppercase tracking-widest text-cream/60 hover:text-bronze-metallic transition-colors focus-visible:ring-2 focus-visible:ring-bronze-metallic outline-none">The Process</a>
             <a 
               href={BOOKING_LINK} 
               onClick={(e) => { e.preventDefault(); scrollToSection(BOOKING_LINK); }}
-              className="bg-bronze-metallic hover:bg-bronze-dark text-emerald-950 px-6 py-2.5 rounded-sm text-xs font-bold uppercase tracking-wider transition-all shadow-lg active:scale-95 inline-block text-center"
+              className="bg-bronze-metallic hover:bg-bronze-dark text-emerald-950 px-6 py-2.5 rounded-sm text-xs font-bold uppercase tracking-wider transition-all shadow-lg active:scale-95 inline-block text-center focus-visible:ring-2 focus-visible:ring-white outline-none"
             >
               Book a Consult
             </a>
           </nav>
 
           <button 
-            className="lg:hidden p-2 text-cream"
+            className="lg:hidden p-2 text-cream focus-visible:ring-2 focus-visible:ring-bronze-metallic outline-none"
             onClick={() => setIsOpen(true)}
             aria-label="Open Menu"
+            aria-expanded={isOpen}
           >
             <span className="material-symbols-outlined text-3xl">menu</span>
           </button>
@@ -110,10 +112,10 @@ const Navbar: React.FC = () => {
           </div>
           <div className="w-full h-px bg-white/10"></div>
           <nav className="flex flex-col p-10 gap-10">
-            <a href="#services" onClick={(e) => handleNavClick(e, '#services')} className="text-2xl font-black uppercase tracking-[0.2em] text-cream/70 font-display">Services</a>
-            <a href="#the-process" onClick={(e) => handleNavClick(e, '#the-process')} className="text-2xl font-black uppercase tracking-[0.2em] text-cream/70 font-display">The Process</a>
+            <a href="#services" onClick={(e) => handleNavClick(e, '#services')} className="text-2xl font-black uppercase tracking-[0.2em] text-cream/70 font-display focus-visible:text-bronze-metallic outline-none">Engagement</a>
+            <a href="#the-process" onClick={(e) => handleNavClick(e, '#the-process')} className="text-2xl font-black uppercase tracking-[0.2em] text-cream/70 font-display focus-visible:text-bronze-metallic outline-none">The Process</a>
             <div className="mt-6">
-              <a href={BOOKING_LINK} onClick={(e) => handleNavClick(e, BOOKING_LINK)} className="block w-full bg-bronze-metallic text-emerald-950 px-6 py-7 rounded-sm text-sm font-black uppercase tracking-[0.3em] text-center">Book a Consult</a>
+              <a href={BOOKING_LINK} onClick={(e) => handleNavClick(e, BOOKING_LINK)} className="block w-full bg-bronze-metallic text-emerald-950 px-6 py-7 rounded-sm text-sm font-black uppercase tracking-[0.3em] text-center focus-visible:ring-4 focus-visible:ring-white outline-none">Book a Consult</a>
             </div>
           </nav>
         </div>

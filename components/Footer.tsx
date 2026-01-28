@@ -1,5 +1,5 @@
 import React from 'react';
-import { scrollToSection } from './Navbar';
+import { scrollToSection, BOOKING_LINK, LINKEDIN_LINK } from './Navbar';
 
 const Footer: React.FC = () => {
   return (
@@ -16,22 +16,22 @@ const Footer: React.FC = () => {
               We turn expertise into compounding digital assets. Engineered for founders who are ready to scale without being the constraint.
             </p>
           </div>
-          
+
           <div className="md:col-span-3">
             <span className="text-meta !text-[9px] mb-8 block">Navigation</span>
             <nav className="flex flex-col gap-4">
-              <FooterLink label="Services" href="#services" />
+              <FooterLink label="Engagement" href="#services" />
               <FooterLink label="Process" href="#the-process" />
-              <FooterLink label="Extraction" href="#" />
+              <FooterLink label="Extraction" href={BOOKING_LINK} />
             </nav>
           </div>
-          
+
           <div className="md:col-span-3">
             <span className="text-meta !text-[9px] mb-8 block">Connect</span>
             <nav className="flex flex-col gap-4">
-              <FooterLink label="LinkedIn" href="#" />
-              <FooterLink label="X / Twitter" href="#" />
-              <FooterLink label="Strategy Call" href="#" />
+              <FooterLink label="LinkedIn" href={LINKEDIN_LINK} />
+              <FooterLink label="X / Twitter" href="https://x.com/" />
+              <FooterLink label="Strategy Call" href={BOOKING_LINK} />
             </nav>
           </div>
         </div>
@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
             © 2024 LeverageStack. All rights reserved.
           </p>
           <p className="text-meta !text-[8px] !text-white/20">
-            Built for Exponential Leverage.
+            Built for Compounding Leverage.
           </p>
         </div>
       </div>
@@ -50,15 +50,15 @@ const Footer: React.FC = () => {
 };
 
 const FooterLink: React.FC<{ label: string; href: string }> = ({ label, href }) => (
-  <a 
-    href={href} 
+  <a
+    href={href}
     onClick={(e) => {
       if (href.startsWith('#')) {
         e.preventDefault();
         scrollToSection(href);
       }
     }}
-    className="text-xs font-medium text-white/40 hover:text-bronze-metallic transition-colors"
+    className="text-xs font-medium text-white/40 hover:text-bronze-metallic transition-colors focus-visible:text-bronze-metallic outline-none"
   >
     {label}
   </a>
