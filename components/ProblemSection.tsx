@@ -62,13 +62,13 @@ const ProblemSection: React.FC = () => {
                 Writers. Tools. Systems.
               </p>
               <p className="text-body-pro !text-cream/80 mb-6 text-balance">
-                They all fail for the same reason: they don't capture how <span className="italic text-cream">you</span> actually think.
+                They all fail for the same reason: they miss how <span className="italic text-cream">you</span> actually think.
               </p>
               <p className="text-body-pro !text-cream/80 max-w-3xl mb-3 text-balance">
                 Generic writers don't understand your frameworks. Off-the-shelf tools can't handle your buyer context.
               </p>
               <p className="text-body-pro !text-cream/80 max-w-3xl text-balance">
-                We combine both: your thinking, crystallized by expert ghostwriters, then systematized with AI that actually operates in your domain.
+                We combine both: your thinking, crystallized by expert ghostwriters, then systematized with AI that operates in your domain.
               </p>
             </div>
           </div>
