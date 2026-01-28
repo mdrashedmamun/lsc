@@ -7,6 +7,7 @@
 - [x] Verify HeroV3 aesthetics and restoration path <!-- id: 9 -->
 - [x] Create Restoration Guide <!-- id: 12 -->
 - [x] Refine "Capture" section visual metaphor <!-- id: 13 -->
+- [x] Implement restrained Process label ("The System") <!-- id: 14 -->
 
 ## Summary
-I have unified the typography to Satoshi, refined the ProblemSection alignment, and evolved the Hero into the "Blueprint Edition" (V3). I have also successfully re-imagined the "Capture" visual as a "Crystallization of Vision" metaphor, featuring a 3D isometric base, extraction lines, and a flickering thought cloud. All changes have been verified in the browser.
+I have unified the typography to Satoshi, evolved the Hero into the "Blueprint Edition" (V3), and implemented the "Crystallization of Vision" metaphor in the Process section. I've also restrained the Process label from "Architectural Flow" to "The System" per Sugarman conversion principles—no interactivity, no framework page.

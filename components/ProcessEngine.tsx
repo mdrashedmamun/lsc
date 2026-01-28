@@ -171,7 +171,7 @@ const ProcessEngine: React.FC = () => {
             <circle r="6" fill="#b8860b" filter="url(#glow)" />
           </g>
 
-          <text y="185" textAnchor="middle" className="text-meta !text-[12px] !fill-bronze-metallic font-bold tracking-[0.5em]">Architectural Flow</text>
+          <text y="185" textAnchor="middle" className="text-meta !text-[10px] !fill-white/30 tracking-[0.3em]">The System</text>
         </g>
 
         {/* --- STAGE 3: YIELD (Continuous Output) --- */}
