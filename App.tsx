@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
+import HeroV2 from './components/HeroV2';
 import ProblemSection from './components/ProblemSection';
 import SolutionSection from './components/SolutionSection';
 import PricingSection from './components/PricingSection';
@@ -11,7 +11,7 @@ const App: React.FC = () => {
     <div className="font-body selection:bg-bronze selection:text-emerald-950 overflow-x-hidden w-full antialiased leading-relaxed">
       <Navbar />
       <main className="w-full overflow-x-hidden">
-        <Hero />
+        <HeroV2 />
         <ProblemSection />
         <SolutionSection />
         <PricingSection />

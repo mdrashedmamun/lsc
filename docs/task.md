@@ -1,9 +1,10 @@
 # Tasks
 
 - [x] Explore the codebase and identify project structure <!-- id: 0 -->
-- [x] Identify font and alignment issues from user feedback <!-- id: 1 -->
-- [x] Define success factors and acceptance criteria <!-- id: 2 -->
-- [x] Review implementation plan with user <!-- id: 6 -->
-- [x] Implement font consistency and alignment fixes <!-- id: 3 -->
-- [x] Verify changes across screen sizes <!-- id: 4 -->
+- [x] Define success factors for HeroV2 implementation <!-- id: 7 -->
+- [x] Implement Digital Sculpture Hero (V2) with 2-group structure <!-- id: 8 -->
+- [x] Verify HeroV2 aesthetics and restoration path <!-- id: 9 -->
 - [x] Create walkthrough <!-- id: 5 -->
+
+## Summary
+I have unified the typography to Satoshi, refined the ProblemSection alignment, and implemented a high-performance "Digital Sculpture" HeroV2. The new Hero follows a 2-group conceptual model (Problem vs. Solution) with advanced typography and metallic glow effects. The original Hero is preserved as `HeroV1.tsx` for easy restoration.

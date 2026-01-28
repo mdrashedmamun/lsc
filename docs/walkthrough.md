@@ -1,8 +1,19 @@
 # Walkthrough - Design & UI/UX Refinement
 
+## [NEW] Digital Sculpture Hero (V2)
+I have overhauled the Hero section into a **2-group conceptual model** to drive a stronger "Problem vs. Solution" narrative.
+
+- **The Logic:** Merged "Your Expertise" and "The Bottleneck" into a single conceptual unit (Problem), creating a high-contrast transition to "The Multiplier" (Solution).
+- **Aesthetic Refinements:**
+    - **Shadow-to-Radiance:** The Problem group is subdued (`text-white/30` to `70`), while the Solution group features a vibrant **Bronze Metallic Glow**.
+    - **Typography Density:** Used Satoshi Black (900) for the Multiplier to convey solid, high-value impact.
+    - **Restoration Path:** I have preserved your original design as [HeroV1.tsx](file:///Users/md.rashedmamun/Desktop/leveragestack/components/HeroV1.tsx). You can swap between V1 and V2 in `App.tsx` at any time.
+
+![Hero V2 Final Presentation](/Users/md.rashedmamun/.gemini/antigravity/brain/23810c07-1ade-468a-b074-3923e2499155/hero_v2_final_presentation_1769578704916.png)
+
 I have successfully unified the typography and refined the layout to meet high-end professional standards.
 
-## Changes Made
+## Core Design Changes
 
 ### 1. Typography Unification: "All Satoshi"
 I moved from a serif/sans-serif pairing to a unified **Satoshi** system. This creates a more cohesive, authoritative, and modern aesthetic.
