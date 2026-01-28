@@ -21,14 +21,17 @@ const PricingSection: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 hairline">
           <PricingPanel
             title="FOUNDATION"
-            tag="STRATEGIC BUILD"
-            whoFor="For solo operators who need their expertise documented and their first automation layer in place."
+            tag="EMAIL AUTHORITY"
+            whoFor="For founders who need their expertise captured and their first AI-driven funnel in place."
             deliverables={[
               "90-minute expertise extraction session",
-              "4 editorial articles per month",
-              "1 core framework asset",
-              "Initial AI follow-up workflow",
-              "End-to-end execution and delivery",
+              "4 long-form email newsletters per month",
+              "4 short-form email newsletters per month",
+              "4 subject-matter expert interviews per month",
+              "Monthly strategy call",
+              "Complete email execution (writing, editing, scheduling)",
+              "AI-driven follow-up funnel (designed and implemented)",
+              "Email performance tracking and reporting",
               "6-month commitment"
             ]}
           />
@@ -36,29 +39,35 @@ const PricingSection: React.FC = () => {
             title="GROWTH ENGINE"
             tag="OPERATIONAL SCALE"
             isPopular
-            whoFor="For teams who need consistent authority content and smoother deal execution."
+            whoFor="For teams who need email scale and smarter funnel mechanics."
             deliverables={[
               "Everything in Foundation",
-              "12 social content assets per month",
-              "4 long-form case studies per month",
-              "AI lead qualification and routing system",
-              "Monthly strategy and performance reviews",
-              "Ongoing execution and optimization",
+              "8 long-form email newsletters per month",
+              "4 short-form email newsletters per month",
+              "4 subject-matter expert interviews per month",
+              "Monthly strategy call",
+              "Quarterly custom email asset (lead magnet, nurture sequence, or email course)",
+              "AI-driven lead qualification and routing funnel",
+              "Performance analytics dashboard (updated weekly)",
+              "Ongoing optimization and strategic oversight",
               "6-month commitment"
             ]}
           />
           <PricingPanel
             title="MARKET LEADER"
-            tag="TOTAL ECOSYSTEM"
-            whoFor="For established businesses who want full positioning and complete operational automation."
+            tag="FULL EXECUTION"
+            whoFor="For established businesses who want full execution—no founder involvement."
             deliverables={[
               "Everything in Growth Engine",
-              "Expanded editorial production at scale",
+              "Comprehensive industry research and reports",
+              "Editorial content derived from research",
+              "Original data analysis and insight development",
+              "Professional design and data visualization",
               "Full AI execution layer across sales and operations",
-              "Email drip automation",
-              "Partner-level strategy support",
+              "Automated email education and nurture systems",
               "Dedicated execution team",
-              "Quarterly engagement"
+              "Partner-level strategy support",
+              "Quarterly engagement — we run the system for you"
             ]}
           />
         </div>
