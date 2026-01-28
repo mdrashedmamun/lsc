@@ -2,7 +2,7 @@ import React from 'react';
 
 const ProcessStory: React.FC = () => {
     return (
-        <div className="w-full max-w-6xl mx-auto px-6">
+        <div className="w-full max-w-6xl mx-auto px-4 md:px-6">
             {/* Bridge Line - Reduces Cognitive Load */}
             <div className="text-center mb-12 md:mb-16">
                 <p className="text-meta !text-[10px] !text-white/40 tracking-[0.3em] uppercase">
@@ -12,10 +12,10 @@ const ProcessStory: React.FC = () => {
 
             {/* The Diagram Container */}
             <div className="relative">
-                {/* Connection Line (Desktop Only) */}
-                <div className="hidden lg:block absolute top-[60px] left-[15%] right-[15%] h-px bg-gradient-to-r from-transparent via-bronze-metallic/30 to-transparent"></div>
+                {/* Connection Line (Tablet and Desktop Only) */}
+                <div className="hidden md:block absolute top-[64px] left-[15%] right-[15%] h-px bg-gradient-to-r from-transparent via-bronze-metallic/30 to-transparent"></div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-20 lg:gap-32">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 lg:gap-16 xl:gap-20">
                     {/* CRYSTALLIZATION */}
                     <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
                         <div className="h-32 flex items-center justify-center mb-12 relative z-10">

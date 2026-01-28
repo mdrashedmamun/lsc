@@ -10,7 +10,7 @@ const SolutionSection: React.FC = () => {
 
         {/* THE PROCESS STORY - The Belief Anchor */}
         <ScrollReveal>
-          <div className="relative w-full min-h-[500px] flex flex-col items-center justify-center mb-40 md:mb-56 pt-24">
+          <div className="relative w-full min-h-[400px] md:min-h-[500px] flex flex-col items-center justify-center mb-32 md:mb-40 lg:mb-56 pt-16 md:pt-24">
             <ProcessStory />
             <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_50%_50%,rgba(184,134,11,0.08)_0%,transparent_70%)]"></div>
           </div>

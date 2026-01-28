@@ -12,8 +12,18 @@ const Hero: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // #region agent log
+  React.useEffect(() => {
+    const heroSection = document.querySelector('[data-hero-section]');
+    if (heroSection) {
+      const rect = heroSection.getBoundingClientRect();
+      fetch('http://127.0.0.1:7242/ingest/e9a90b95-55e2-44b2-b458-4cb029559b96',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'Hero.tsx:16',message:'Hero section dimensions',data:{viewportHeight:window.innerHeight,heroHeight:rect.height,scrollY},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'C'})}).catch(()=>{});
+    }
+  }, [scrollY]);
+  // #endregion
+
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center pt-32 pb-24 overflow-hidden bg-emerald-950">
+    <section className="relative min-h-screen flex flex-col items-center justify-center pt-32 pb-24 overflow-hidden bg-emerald-950" data-hero-section>
       {/* Subtle Depth Overlay */}
       <div
         className="absolute inset-0 pointer-events-none"

@@ -31,10 +31,21 @@ const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
+    const handleScroll = () => {
+      const wasScrolled = scrolled;
+      const nowScrolled = window.scrollY > 20;
+      setScrolled(nowScrolled);
+      // #region agent log
+      if (wasScrolled !== nowScrolled) {
+        const header = document.querySelector('[data-navbar-header]');
+        const headerRect = header?.getBoundingClientRect();
+        fetch('http://127.0.0.1:7242/ingest/e9a90b95-55e2-44b2-b458-4cb029559b96',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'Navbar.tsx:34',message:'Navbar sticky state change',data:{scrollY:window.scrollY,isScrolled:nowScrolled,headerHeight:headerRect?.height},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'D'})}).catch(()=>{});
+      }
+      // #endregion
+    };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [scrolled]);
 
   useEffect(() => {
     if (isOpen) {
@@ -53,7 +64,7 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <header className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${scrolled ? 'bg-emerald-950/95 backdrop-blur-md h-20 border-b border-white/10' : 'bg-transparent h-24'}`}>
+      <header className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${scrolled ? 'bg-emerald-950/95 backdrop-blur-md h-20 border-b border-white/10' : 'bg-transparent h-24'}`} data-navbar-header>
         <div className="max-w-7xl mx-auto px-6 lg:px-10 h-full flex items-center justify-between">
           <div
             className="flex items-center gap-3 cursor-pointer group"

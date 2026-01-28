@@ -4,7 +4,7 @@ import { scrollToSection, BOOKING_LINK } from './Navbar';
 
 const PricingSection: React.FC = () => {
   return (
-    <section id="services" className="relative py-48 px-6 bg-emerald-950 overflow-hidden">
+    <section id="services" className="relative pt-52 pb-48 px-6 bg-emerald-950 overflow-x-hidden">
       <div className="max-w-7xl mx-auto">
         <ScrollReveal>
           <div className="text-center mb-32">
@@ -18,7 +18,7 @@ const PricingSection: React.FC = () => {
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 hairline auto-rows-fr">
+        <div className="grid grid-cols-1 md:grid-cols-3 hairline relative">
           <PricingPanel
             title="Foundation"
             tag="Authority Core"
@@ -35,23 +35,30 @@ const PricingSection: React.FC = () => {
               "Success: Your thinking is usable without you."
             ]}
           />
-          <PricingPanel
-            title="Growth Engine"
-            tag="Systemic Scale"
-            isPopular
-            whoFor="For teams who need to move from 'one-off posting' to a high-frequency authority system."
-            deliverables={[
-              "Everything in Foundation",
-              "2 high-leverage 'Pillars' per week (Ghostwritten)",
-              "Expanded distribution (Personal Brand + Company)",
-              "Daily subject-matter expert extraction",
-              "Automated lead qualification funnel",
-              "Full AI execution layer (multi-channel logic)",
-              "Performance analytics & ROI tracking",
-              "6-month commitment",
-              "Success: Content runs consistently without founder chasing."
-            ]}
-          />
+          <div className="relative">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[100]">
+              <span className="bg-[#eab308] text-black text-[9px] font-black uppercase tracking-[0.3em] px-5 py-2 rounded-full shadow-lg whitespace-nowrap block">
+                Most Popular
+              </span>
+            </div>
+            <PricingPanel
+              title="Growth Engine"
+              tag="Systemic Scale"
+              isPopular
+              whoFor="For teams who need to move from 'one-off posting' to a high-frequency authority system."
+              deliverables={[
+                "Everything in Foundation",
+                "2 high-leverage 'Pillars' per week (Ghostwritten)",
+                "Expanded distribution (Personal Brand + Company)",
+                "Daily subject-matter expert extraction",
+                "Automated lead qualification funnel",
+                "Full AI execution layer (multi-channel logic)",
+                "Performance analytics & ROI tracking",
+                "6-month commitment",
+                "Success: Content runs consistently without founder chasing."
+              ]}
+            />
+          </div>
           <PricingPanel
             title="Market Leader"
             tag="Full Execution"
@@ -87,19 +94,13 @@ const PricingSection: React.FC = () => {
   );
 };
 
-const PricingPanel: React.FC<{ title: string; tag: string; whoFor: string; deliverables: string[]; isPopular?: boolean }> = ({ title, tag, whoFor, deliverables, isPopular }) => (
-  <div className={`group relative p-12 lg:p-16 ${isPopular ? 'pt-16 md:pt-20 lg:pt-24' : ''} hairline-l first:border-l-0 flex flex-col transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-4 hover:bg-white/[0.04] hover:shadow-[0_20px_50px_rgba(184,134,11,0.1)]`}>
+const PricingPanel: React.FC<{ title: string; tag: string; whoFor: string; deliverables: string[]; isPopular?: boolean }> = ({ title, tag, whoFor, deliverables, isPopular }) => {
+  return (
+  <div className={`group relative p-12 lg:p-16 hairline-l first:border-l-0 flex flex-col h-full transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-4 hover:bg-white/[0.04] hover:shadow-[0_20px_50px_rgba(184,134,11,0.1)]`}>
 
     {/* Inset Border Effect */}
     <div className="absolute inset-0 border border-bronze-metallic/0 group-hover:border-bronze-metallic/20 transition-all duration-700 pointer-events-none z-10"></div>
 
-    {isPopular && (
-      <div className="absolute top-0 left-0 right-0 flex justify-center -translate-y-1/2 z-20">
-        <span className="bg-[#eab308] text-black text-[9px] font-black uppercase tracking-[0.3em] px-5 py-2 rounded-full shadow-lg">
-          Most Popular
-        </span>
-      </div>
-    )}
 
     <div className="mb-16 relative z-10">
       <span className="text-meta !text-[10px] !text-bronze-metallic/60 mb-6 block tracking-[0.3em] font-sans">{tag}</span>
@@ -126,6 +127,7 @@ const PricingPanel: React.FC<{ title: string; tag: string; whoFor: string; deliv
       </p>
     </div>
   </div>
-);
+  );
+};
 
 export default PricingSection;

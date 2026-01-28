@@ -6,6 +6,9 @@ const ProcessEngine: React.FC = () => {
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
+      // #region agent log
+      fetch('http://127.0.0.1:7242/ingest/e9a90b95-55e2-44b2-b458-4cb029559b96',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'ProcessEngine.tsx:8',message:'Viewport resize',data:{innerWidth:window.innerWidth,innerHeight:window.innerHeight,isMobile:window.innerWidth<768},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'A'})}).catch(()=>{});
+      // #endregion
     };
     handleResize();
     window.addEventListener('resize', handleResize);
@@ -19,8 +22,20 @@ const ProcessEngine: React.FC = () => {
   const c2 = isMobile ? { x: 250, y: 600 } : { x: 500, y: 250 };
   const c3 = isMobile ? { x: 250, y: 1000 } : { x: 800, y: 250 };
 
+  // #region agent log
+  React.useEffect(() => {
+    const container = document.querySelector('[data-process-engine]');
+    if (container) {
+      const rect = container.getBoundingClientRect();
+      const logData = {location:'ProcessEngine.tsx:23',message:'ProcessEngine container dimensions',data:{width:rect.width,height:rect.height,viewBox:isMobile?"0 0 500 1200":"0 0 1000 500",isMobile},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'A'};
+      console.log('[DEBUG] ProcessEngine layout:', logData);
+      fetch('http://127.0.0.1:7242/ingest/e9a90b95-55e2-44b2-b458-4cb029559b96',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(logData)}).catch(()=>{});
+    }
+  }, [isMobile]);
+  // #endregion
+
   return (
-    <div className="w-full h-full relative flex items-center justify-center">
+    <div className="w-full h-full relative flex items-center justify-center" data-process-engine>
       <style>{`
         @keyframes rotateClockwise {
           from { transform: rotate(0deg); }

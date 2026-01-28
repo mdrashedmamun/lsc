@@ -8,3 +8,9 @@
     @apply bg-emerald-950 text-cream antialiased selection:bg-bronze selection:text-emerald-950;
   }
 }
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

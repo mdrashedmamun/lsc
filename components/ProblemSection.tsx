@@ -7,37 +7,25 @@ const ProblemSection: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         {/* THE FRICTION - Main Headline */}
         <ScrollReveal>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-20 mb-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-20 mb-16 md:mb-24 items-start">
             <div>
               <span className="text-meta mb-8 block">THE FRICTION</span>
-              <h2 className="text-h2 text-cream">
+              <h2 className="text-h2 text-cream text-balance">
                 Growth stops <br />
                 with you.
               </h2>
-            </div>
-            <div className="lg:pt-20">
-              <p className="text-body-pro max-w-lg">
-                You've built a real business, but it still requires your presence in every conversation to close or deliver.
+              <p className="text-h3 text-cream/90 mt-10 text-balance">
+                This is the ceiling.
               </p>
             </div>
-          </div>
-        </ScrollReveal>
-
-        {/* THE CEILING - Standalone Statement */}
-        <ScrollReveal>
-          <div className="mb-16 md:mb-24">
-            <p className="text-h3 text-cream/90 max-w-2xl">
-              This is the ceiling.
-            </p>
-          </div>
-        </ScrollReveal>
-
-        {/* Connecting Line */}
-        <ScrollReveal>
-          <div className="mb-16 md:mb-24">
-            <p className="text-body-pro !text-cream/60 max-w-2xl">
-              When everything depends on you, the same three breakdowns show up again and again.
-            </p>
+            <div className="lg:pt-20">
+              <p className="text-body-pro max-w-lg text-balance">
+                You've built a real business, but it still requires your presence in every conversation to close or deliver.
+              </p>
+              <p className="text-body-pro !text-cream/60 max-w-lg mt-6 text-balance">
+                When everything depends on you, the same three breakdowns show up again and again.
+              </p>
+            </div>
           </div>
         </ScrollReveal>
 
@@ -60,32 +48,27 @@ const ProblemSection: React.FC = () => {
           />
         </div>
 
-        {/* Resolution - What's Missing */}
+        {/* Bridge - Lead + What You've Tried */}
         <ScrollReveal>
-          <div className="text-center py-40 hairline-t relative overflow-hidden">
-            <div className="max-w-3xl mx-auto px-6">
-              <p className="text-body-pro !text-cream/70 max-w-2xl mx-auto mb-16">
+          <div className="py-24 md:py-28 hairline-t">
+            <div className="max-w-4xl">
+              <p className="text-body-pro !text-cream/70 max-w-3xl mb-8 text-balance">
                 Now your expertise needs to become the <span className="text-cream font-medium">lever that keeps working</span> while you focus where you want — not where you're forced to.
               </p>
-            </div>
-          </div>
-        </ScrollReveal>
-
-        {/* What You've Tried - Bridge to Solution */}
-        <ScrollReveal>
-          <div className="py-32 hairline-t">
-            <div className="max-w-2xl">
-              <p className="text-body-pro !text-cream/50 mb-6">
+              <p className="text-body-pro !text-cream/50 mb-4">
                 You've tried the usual paths.
               </p>
-              <p className="text-body-pro !text-cream/50 mb-10">
+              <p className="text-body-pro !text-cream/50 mb-8">
                 Writers. Tools. Systems.
               </p>
-              <p className="text-body-pro !text-cream/80">
+              <p className="text-body-pro !text-cream/80 mb-6 text-balance">
                 They all fail for the same reason: they don't capture how <span className="italic text-cream">you</span> actually think.
               </p>
-              <p className="text-body-pro !text-cream/80 mb-10">
-                Generic writers don't understand your frameworks. Off-the-shelf tools can't handle your buyer context. We combine both: your thinking, crystallized by expert ghostwriters, then systematized with AI that actually operates in your domain.
+              <p className="text-body-pro !text-cream/80 max-w-3xl mb-3 text-balance">
+                Generic writers don't understand your frameworks. Off-the-shelf tools can't handle your buyer context.
+              </p>
+              <p className="text-body-pro !text-cream/80 max-w-3xl text-balance">
+                We combine both: your thinking, crystallized by expert ghostwriters, then systematized with AI that actually operates in your domain.
               </p>
             </div>
           </div>
