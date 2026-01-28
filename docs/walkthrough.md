@@ -1,15 +1,20 @@
 # Walkthrough - Design & UI/UX Refinement
 
-## [NEW] Digital Sculpture Hero (V2)
-I have overhauled the Hero section into a **2-group conceptual model** to drive a stronger "Problem vs. Solution" narrative.
+## [NEW] Architectural Blueprint Hero (V3)
+I have further refined the Hero section to include **Architectural Abstractions**, creating a more system-oriented visual richness.
 
-- **The Logic:** Merged "Your Expertise" and "The Bottleneck" into a single conceptual unit (Problem), creating a high-contrast transition to "The Multiplier" (Solution).
-- **Aesthetic Refinements:**
-    - **Shadow-to-Radiance:** The Problem group is subdued (`text-white/30` to `70`), while the Solution group features a vibrant **Bronze Metallic Glow**.
-    - **Typography Density:** Used Satoshi Black (900) for the Multiplier to convey solid, high-value impact.
-    - **Restoration Path:** I have preserved your original design as [HeroV1.tsx](file:///Users/md.rashedmamun/Desktop/leveragestack/components/HeroV1.tsx). You can swap between V1 and V2 in `App.tsx` at any time.
+- **The Logic:** Added a subtle isometric grid and mathematical drafting lines (3-5% opacity) that move with **Parallax** as the user scrolls. 
+- **Contrast Boost:** As per the reviewer's feedback, I increased the text visibility:
+    - Problem Subheading: 30% → **50% Opacity**.
+    - Problem Headline: 70% → **85% Opacity**.
+- **Systemic Vibe:** These changes make the site feel like a "Master Architect's Blueprint," perfectly aligning with your brand promise of building systemic leverage.
 
-![Hero V2 Final Presentation](/Users/md.rashedmamun/.gemini/antigravity/brain/23810c07-1ade-468a-b074-3923e2499155/hero_v2_final_presentation_1769578704916.png)
+![Hero V3 Blueprint Presentation](/Users/md.rashedmamun/.gemini/antigravity/brain/23810c07-1ade-468a-b074-3923e2499155/herov3_final_look_1769580300365.png)
+
+> [!TIP]
+> **Easy Restoration:** I have preserved all previous versions. Check the [Restoration Guide](file:///Users/md.rashedmamun/.gemini/antigravity/brain/23810c07-1ade-468a-b074-3923e2499155/restoration_guide.md) for instructions on how to swap between V1, V2, and V3.
+
+## Digital Sculpture Hero (V2)
 
 I have successfully unified the typography and refined the layout to meet high-end professional standards.
 

@@ -19,42 +19,12 @@ const HeroV2: React.FC = () => {
           0%, 100% { opacity: 1; filter: drop-shadow(0 0 15px rgba(184, 134, 11, 0.4)); }
           50% { opacity: 0.9; filter: drop-shadow(0 0 5px rgba(184, 134, 11, 0.1)); }
         }
-        @keyframes lightSweep {
-          0% { transform: translateX(-100%) skewX(-15deg); }
-          100% { transform: translateX(200%) skewX(-15deg); }
-        }
         .multiplier-glow {
           animation: bronzePulse 4s ease-in-out infinite;
         }
-        .light-sweep {
-          animation: lightSweep 10s linear infinite;
-        }
       `}</style>
 
-            {/* ARCHITECTURAL "BLUEPRINT" OVERLAY */}
-            <div
-                className="absolute inset-0 pointer-events-none z-0"
-                style={{ transform: `translateY(${scrollY * 0.15}px)` }}
-            >
-                {/* Isometric Grid Pattern */}
-                <div className="absolute inset-0 opacity-[0.03] select-none"
-                    style={{ backgroundImage: `radial-gradient(circle at 1px 1px, #fdfbf7 1px, transparent 0)`, backgroundSize: '40px 40px' }}>
-                </div>
-
-                {/* Architectural Drafting Lines */}
-                <svg className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[800px] opacity-[0.05]" viewBox="0 0 1000 800" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 400H1000M500 0V800M100 0L900 800M900 0L100 800" stroke="#cd7f32" strokeWidth="0.5" />
-                    <circle cx="500" cy="400" r="150" stroke="#cd7f32" strokeWidth="0.5" />
-                    <circle cx="500" cy="400" r="300" stroke="#cd7f32" strokeWidth="0.5" strokeDasharray="10 10" />
-                </svg>
-
-                {/* Subtle Bronze Sweep */}
-                <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-                    <div className="light-sweep absolute top-0 left-0 w-1/3 h-full bg-gradient-to-r from-transparent via-bronze-metallic/5 to-transparent opacity-20"></div>
-                </div>
-            </div>
-
-            {/* Subtle Depth Glow */}
+            {/* Subtle Depth Overlay */}
             <div
                 className="absolute inset-0 pointer-events-none"
                 style={{ transform: `translateY(${scrollY * 0.1}px)` }}
@@ -73,10 +43,10 @@ const HeroV2: React.FC = () => {
                     {/* GROUP 1: THE PROBLEM (Shadowed & Heavy) */}
                     <div className="opacity-0 animate-reveal [animation-delay:400ms] flex flex-col items-center">
                         <h1 className="flex flex-col items-center">
-                            <span className="font-sans text-[20px] md:text-[28px] font-medium text-white/50 uppercase tracking-[0.2em] mb-4">
+                            <span className="font-sans text-[20px] md:text-[28px] font-medium text-white/30 uppercase tracking-[0.2em] mb-4">
                                 Your Expertise Shouldn't Be
                             </span>
-                            <span className="text-h1 text-white/85 font-extrabold leading-[0.85] tracking-tight">
+                            <span className="text-h1 text-white/70 font-extrabold leading-[0.85] tracking-tight">
                                 The Bottleneck.
                             </span>
                         </h1>
