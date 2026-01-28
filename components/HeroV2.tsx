@@ -3,13 +3,36 @@ import { scrollToSection, BOOKING_LINK } from './Navbar';
 
 const HeroV2: React.FC = () => {
     const [scrollY, setScrollY] = useState(0);
+    const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
 
     useEffect(() => {
-        const handleScroll = () => {
-            setScrollY(window.scrollY);
+        const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+        const updateMotionPreference = (event?: MediaQueryListEvent) => {
+            setPrefersReducedMotion(event ? event.matches : mediaQuery.matches);
         };
+        updateMotionPreference();
+
+        const handleScroll = () => {
+            if (!mediaQuery.matches) {
+                setScrollY(window.scrollY);
+            }
+        };
+
         window.addEventListener('scroll', handleScroll, { passive: true });
-        return () => window.removeEventListener('scroll', handleScroll);
+        if (typeof mediaQuery.addEventListener === 'function') {
+            mediaQuery.addEventListener('change', updateMotionPreference);
+        } else {
+            mediaQuery.addListener(updateMotionPreference);
+        }
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            if (typeof mediaQuery.removeEventListener === 'function') {
+                mediaQuery.removeEventListener('change', updateMotionPreference);
+            } else {
+                mediaQuery.removeListener(updateMotionPreference);
+            }
+        };
     }, []);
 
     return (
@@ -34,7 +57,7 @@ const HeroV2: React.FC = () => {
             {/* ARCHITECTURAL "BLUEPRINT" OVERLAY */}
             <div
                 className="absolute inset-0 pointer-events-none z-0"
-                style={{ transform: `translateY(${scrollY * 0.15}px)` }}
+                style={{ transform: prefersReducedMotion ? 'none' : `translateY(${scrollY * 0.15}px)` }}
             >
                 {/* Isometric Grid Pattern */}
                 <div className="absolute inset-0 opacity-[0.03] select-none"
@@ -57,7 +80,7 @@ const HeroV2: React.FC = () => {
             {/* Subtle Depth Glow */}
             <div
                 className="absolute inset-0 pointer-events-none"
-                style={{ transform: `translateY(${scrollY * 0.1}px)` }}
+                style={{ transform: prefersReducedMotion ? 'none' : `translateY(${scrollY * 0.1}px)` }}
             >
                 <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_-20%,rgba(184,134,11,0.12)_0%,transparent_70%)]"></div>
             </div>
@@ -73,7 +96,7 @@ const HeroV2: React.FC = () => {
                     {/* GROUP 1: THE PROBLEM (Shadowed & Heavy) */}
                     <div className="opacity-0 animate-reveal [animation-delay:400ms] flex flex-col items-center">
                         <h1 className="flex flex-col items-center">
-                            <span className="font-sans text-[20px] md:text-[28px] font-medium text-white/50 uppercase tracking-[0.2em] mb-4">
+                            <span className="font-sans text-[24px] md:text-[28px] font-medium text-white/50 tracking-[0.08em] mb-4">
                                 Your Expertise Shouldn't Be
                             </span>
                             <span className="text-h1 text-white/85 font-extrabold leading-[0.85] tracking-tight">
@@ -98,7 +121,7 @@ const HeroV2: React.FC = () => {
 
                 <div className="max-w-2xl mx-auto mt-24 mb-16 opacity-0 animate-reveal [animation-delay:1000ms]">
                     <p className="text-body-pro !text-white/50">
-                        We turn your thinking into content that pre-sells prospects, then build AI workflows that handle follow-ups, qualification, and routing.
+                        We turn your expertise into a self-sustaining system. Ghostwritten content brings in pre-sold buyers. AI workflows move deals forward—without you pushing.
                     </p>
                 </div>
 
@@ -106,9 +129,9 @@ const HeroV2: React.FC = () => {
                     <a
                         href={BOOKING_LINK}
                         onClick={(e) => { e.preventDefault(); scrollToSection(BOOKING_LINK); }}
-                        className="group relative px-16 py-7 bg-transparent border border-bronze-metallic/30 text-bronze-metallic font-bold uppercase tracking-[0.4em] text-[10px] transition-all duration-500 hover:bg-bronze-metallic hover:text-emerald-950 hover:border-bronze-metallic rounded-none focus-visible:ring-2 focus-visible:ring-bronze-metallic outline-none"
+                        className="group relative px-16 py-7 bg-transparent border border-bronze-metallic/50 text-bronze-metallic font-bold tracking-[0.12em] text-[11px] transition-all duration-500 hover:bg-bronze-metallic hover:text-emerald-950 hover:border-bronze-metallic rounded-none focus-visible:ring-2 focus-visible:ring-bronze-metallic outline-none"
                     >
-                        Book a call
+                        Schedule Your Strategy Call
                     </a>
                 </div>
             </div>

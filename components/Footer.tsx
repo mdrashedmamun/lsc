@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-16 mb-24">
           <div className="md:col-span-6">
             <div className="flex items-center gap-4 text-bronze-metallic mb-8">
-              <h2 className="text-2xl font-black text-cream uppercase tracking-tight font-sans">
+              <h2 className="text-2xl font-black text-cream tracking-tight font-sans">
                 Leverage Stack
               </h2>
             </div>

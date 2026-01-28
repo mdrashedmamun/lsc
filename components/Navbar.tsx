@@ -64,20 +64,20 @@ const Navbar: React.FC = () => {
                 <path d="M42.1739 20.1739L27.8261 5.82609C29.1366 7.13663 28.3989 10.1876 26.2002 13.7654C24.8538 15.9564 22.9595 18.3449 20.6522 20.6522C18.3449 22.9595 15.9564 24.8538 13.7654 26.2002C10.1876 28.3989 7.13663 29.1366 5.82609 27.8261L20.1739 42.1739C21.4845 43.4845 24.5355 42.7467 28.1133 40.548C30.3042 39.2016 32.6927 37.3073 35 35C37.3073 32.6927 39.2016 30.4042 40.548 28.1133C42.7467 24.5355 43.4845 21.4845 42.1739 20.1739Z" fill="currentColor"></path>
               </svg>
             </div>
-            <h1 className="text-lg md:text-xl font-black tracking-tight text-cream uppercase font-display">
+            <h1 className="text-lg md:text-xl font-black tracking-tight text-cream font-display">
               Leverage Stack
             </h1>
           </div>
 
           <nav className="hidden lg:flex items-center gap-10">
-            <a href="#services" onClick={(e) => handleNavClick(e, '#services')} className="text-xs font-bold uppercase tracking-widest text-cream/60 hover:text-bronze-metallic transition-colors focus-visible:ring-2 focus-visible:ring-bronze-metallic outline-none">Engagement</a>
-            <a href="#the-process" onClick={(e) => handleNavClick(e, '#the-process')} className="text-xs font-bold uppercase tracking-widest text-cream/60 hover:text-bronze-metallic transition-colors focus-visible:ring-2 focus-visible:ring-bronze-metallic outline-none">The Process</a>
+            <a href="#services" onClick={(e) => handleNavClick(e, '#services')} className="text-xs font-bold tracking-[0.08em] text-cream/60 hover:text-bronze-metallic transition-colors focus-visible:ring-2 focus-visible:ring-bronze-metallic outline-none">Engagement</a>
+            <a href="#the-process" onClick={(e) => handleNavClick(e, '#the-process')} className="text-xs font-bold tracking-[0.08em] text-cream/60 hover:text-bronze-metallic transition-colors focus-visible:ring-2 focus-visible:ring-bronze-metallic outline-none">The Process</a>
             <a
               href={BOOKING_LINK}
               onClick={(e) => { e.preventDefault(); scrollToSection(BOOKING_LINK); }}
-              className="bg-bronze-metallic hover:bg-bronze-dark text-emerald-950 px-6 py-2.5 rounded-sm text-xs font-bold uppercase tracking-wider transition-all shadow-lg active:scale-95 inline-block text-center focus-visible:ring-2 focus-visible:ring-white outline-none"
+              className="bg-bronze-metallic hover:bg-bronze-dark text-emerald-950 px-6 py-2.5 rounded-none text-xs font-bold tracking-[0.12em] transition-all shadow-lg active:scale-95 inline-block text-center focus-visible:ring-2 focus-visible:ring-white outline-none"
             >
-              Book a Consult
+              Schedule Your Strategy Call
             </a>
           </nav>
 
@@ -102,7 +102,7 @@ const Navbar: React.FC = () => {
                   <path d="M42.1739 20.1739L27.8261 5.82609C29.1366 7.13663 28.3989 10.1876 26.2002 13.7654C24.8538 15.9564 22.9595 18.3449 20.6522 20.6522C18.3449 22.9595 15.9564 24.8538 13.7654 26.2002C10.1876 28.3989 7.13663 29.1366 5.82609 27.8261L20.1739 42.1739C21.4845 43.4845 24.5355 42.7467 28.1133 40.548C30.3042 39.2016 32.6927 37.3073 35 35C37.3073 32.6927 39.2016 30.4042 40.548 28.1133C42.7467 24.5355 43.4845 21.4845 42.1739 20.1739Z" fill="currentColor"></path>
                 </svg>
               </div>
-              <h1 className="text-xl font-black tracking-tight text-cream uppercase font-display">
+              <h1 className="text-xl font-black tracking-tight text-cream font-display">
                 Leverage Stack
               </h1>
             </div>
@@ -112,10 +112,10 @@ const Navbar: React.FC = () => {
           </div>
           <div className="w-full h-px bg-white/10"></div>
           <nav className="flex flex-col p-10 gap-10">
-            <a href="#services" onClick={(e) => handleNavClick(e, '#services')} className="text-2xl font-black uppercase tracking-[0.2em] text-cream/70 font-display focus-visible:text-bronze-metallic outline-none">Engagement</a>
-            <a href="#the-process" onClick={(e) => handleNavClick(e, '#the-process')} className="text-2xl font-black uppercase tracking-[0.2em] text-cream/70 font-display focus-visible:text-bronze-metallic outline-none">The Process</a>
+            <a href="#services" onClick={(e) => handleNavClick(e, '#services')} className="text-2xl font-black tracking-[0.08em] text-cream/70 font-display focus-visible:text-bronze-metallic outline-none">Engagement</a>
+            <a href="#the-process" onClick={(e) => handleNavClick(e, '#the-process')} className="text-2xl font-black tracking-[0.08em] text-cream/70 font-display focus-visible:text-bronze-metallic outline-none">The Process</a>
             <div className="mt-6">
-              <a href={BOOKING_LINK} onClick={(e) => handleNavClick(e, BOOKING_LINK)} className="block w-full bg-bronze-metallic text-emerald-950 px-6 py-7 rounded-sm text-sm font-black uppercase tracking-[0.3em] text-center focus-visible:ring-4 focus-visible:ring-white outline-none">Book a Consult</a>
+              <a href={BOOKING_LINK} onClick={(e) => handleNavClick(e, BOOKING_LINK)} className="block w-full bg-bronze-metallic text-emerald-950 px-6 py-7 rounded-none text-sm font-black tracking-[0.12em] text-center focus-visible:ring-4 focus-visible:ring-white outline-none">Schedule Your Strategy Call</a>
             </div>
           </nav>
         </div>

@@ -84,6 +84,9 @@ const ProblemSection: React.FC = () => {
               <p className="text-body-pro !text-cream/80">
                 They all fail for the same reason: they don't capture how <span className="italic text-cream">you</span> actually think.
               </p>
+              <p className="text-body-pro !text-cream/80 mb-10">
+                Generic writers don't understand your frameworks. Off-the-shelf tools can't handle your buyer context. We combine both: your thinking, crystallized by expert ghostwriters, then systematized with AI that actually operates in your domain.
+              </p>
             </div>
           </div>
         </ScrollReveal>

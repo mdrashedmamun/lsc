@@ -21,7 +21,7 @@ const ProcessStory: React.FC = () => {
                         <div className="h-32 flex items-center justify-center mb-12 relative z-10">
                             <CrystallizationIcon />
                         </div>
-                        <h4 className="text-h4 text-cream !text-xs tracking-[0.3em] font-bold uppercase mb-4">Crystallization</h4>
+                        <h4 className="text-h4 text-cream !text-xs tracking-[0.12em] font-bold mb-4">Crystallization</h4>
                         <p className="text-body-pro !text-base text-cream/90 mb-6">
                             Your expertise, captured and clarified.
                         </p>
@@ -35,7 +35,7 @@ const ProcessStory: React.FC = () => {
                         <div className="h-32 flex items-center justify-center mb-12 relative z-10">
                             <SystemIcon />
                         </div>
-                        <h4 className="text-h4 text-cream !text-xs tracking-[0.3em] font-bold uppercase mb-4">The System</h4>
+                        <h4 className="text-h4 text-cream !text-xs tracking-[0.12em] font-bold mb-4">The System</h4>
                         <p className="text-body-pro !text-base text-cream/90 mb-6">
                             Authority and execution, working together.
                         </p>
@@ -50,7 +50,7 @@ const ProcessStory: React.FC = () => {
                         <div className="h-32 flex items-center justify-center mb-12 relative z-10">
                             <CompoundingIcon />
                         </div>
-                        <h4 className="text-h4 text-cream !text-xs tracking-[0.3em] font-bold uppercase mb-4">Compounding</h4>
+                        <h4 className="text-h4 text-cream !text-xs tracking-[0.12em] font-bold mb-4">Compounding</h4>
                         <p className="text-body-pro !text-base text-cream/90 mb-6">
                             The work keeps working.
                         </p>

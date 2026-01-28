@@ -35,7 +35,7 @@ const SolutionSection: React.FC = () => {
               </div>
               <div className="lg:col-span-8 p-12 md:p-16 flex items-center">
                 <p className="text-body-pro max-w-2xl">
-                  We capture the logic you use to explain, persuade, and close deals through a focused extraction interview. This becomes the foundation for every email and system we build.
+                  We capture the logic you use to explain, persuade, and close deals through a structured extraction interview—not surface-level Q&A, but the frameworks, objection-handling patterns, and decision triggers that live in your head. This becomes the DNA for everything we write and automate.
                 </p>
               </div>
             </div>
@@ -102,9 +102,9 @@ const SolutionSection: React.FC = () => {
             <a
               href={BOOKING_LINK}
               onClick={(e) => { e.preventDefault(); scrollToSection(BOOKING_LINK); }}
-              className="relative z-10 inline-block px-14 py-7 bg-transparent border border-bronze-metallic text-bronze-metallic font-bold uppercase tracking-[0.4em] text-[10px] transition-all hover:bg-bronze-metallic hover:text-emerald-950"
+              className="relative z-10 inline-block px-14 py-7 bg-transparent border border-bronze-metallic/50 text-bronze-metallic font-bold tracking-[0.12em] text-[11px] transition-all hover:bg-bronze-metallic hover:text-emerald-950"
             >
-              Book a call
+              Schedule Your Strategy Call
             </a>
           </div>
         </ScrollReveal>
