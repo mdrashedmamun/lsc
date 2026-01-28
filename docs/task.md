@@ -6,6 +6,7 @@
 - [x] Implement Architectural Blueprint Hero (V3) with contrast boost <!-- id: 11 -->
 - [x] Verify HeroV3 aesthetics and restoration path <!-- id: 9 -->
 - [x] Create Restoration Guide <!-- id: 12 -->
+- [x] Refine "Capture" section visual metaphor <!-- id: 13 -->
 
 ## Summary
-I have unified the typography to Satoshi, refined the ProblemSection alignment, and evolved the Hero into the "Blueprint Edition" (V3). This version features architectural abstractions, increased text contrast (50%/85%), and parallax depth to align with the brand promise of systemic leverage. All previous versions are preserved for easy restoration.
+I have unified the typography to Satoshi, refined the ProblemSection alignment, and evolved the Hero into the "Blueprint Edition" (V3). I have also successfully re-imagined the "Capture" visual as a "Crystallization of Vision" metaphor, featuring a 3D isometric base, extraction lines, and a flickering thought cloud. All changes have been verified in the browser.

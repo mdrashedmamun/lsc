@@ -1,18 +1,20 @@
 # Walkthrough - Design & UI/UX Refinement
 
+## [NEW] "Crystallization of Vision" Visual
+I have replaced the clinical "radar" icon in the Process section with a more emotionally resonant **3D Isometric Extraction Diagram**.
+
+- **The Metaphor:** It represents the journey from unstructured brilliance into a solid systemic asset:
+    - **Top (Thoughts):** An ethereal glowing cloud.
+    - **Middle (Extraction):** Vertical "Drafting Lines" pulling energy down.
+    - **Bottom (The System):** A solid isometric metallic base with a bronze glow.
+- **Narrative Alignment:** This visually reinforces the brand promise: *"We take your raw vision and build something solid from it."*
+
+![Crystallization Icon Audit](/Users/md.rashedmamun/.gemini/antigravity/brain/23810c07-1ade-468a-b074-3923e2499155/crystallization_icon_audit_v2_1769581893347.png)
+
+> [!NOTE]
+> The original `ProcessEngine.tsx` is preserved as `ProcessEngine_Original.tsx` for easy restoration if needed.
+
 ## [NEW] Architectural Blueprint Hero (V3)
-I have further refined the Hero section to include **Architectural Abstractions**, creating a more system-oriented visual richness.
-
-- **The Logic:** Added a subtle isometric grid and mathematical drafting lines (3-5% opacity) that move with **Parallax** as the user scrolls. 
-- **Contrast Boost:** As per the reviewer's feedback, I increased the text visibility:
-    - Problem Subheading: 30% → **50% Opacity**.
-    - Problem Headline: 70% → **85% Opacity**.
-- **Systemic Vibe:** These changes make the site feel like a "Master Architect's Blueprint," perfectly aligning with your brand promise of building systemic leverage.
-
-![Hero V3 Blueprint Presentation](/Users/md.rashedmamun/.gemini/antigravity/brain/23810c07-1ade-468a-b074-3923e2499155/herov3_final_look_1769580300365.png)
-
-> [!TIP]
-> **Easy Restoration:** I have preserved all previous versions. Check the [Restoration Guide](file:///Users/md.rashedmamun/.gemini/antigravity/brain/23810c07-1ade-468a-b074-3923e2499155/restoration_guide.md) for instructions on how to swap between V1, V2, and V3.
 
 ## Digital Sculpture Hero (V2)
 

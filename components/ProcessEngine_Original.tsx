@@ -43,15 +43,6 @@ const ProcessEngine: React.FC = () => {
           0%, 100% { transform: scale(1); opacity: 0.1; }
           50% { transform: scale(1.05); opacity: 0.25; }
         }
-        @keyframes flicker {
-          0%, 100% { opacity: 0.2; }
-          50% { opacity: 0.5; }
-        }
-        @keyframes architectDraw {
-          0% { stroke-dashoffset: 100; opacity: 0; }
-          50% { opacity: 0.5; }
-          100% { stroke-dashoffset: 0; opacity: 0.2; }
-        }
         .engine-rotate { transform-origin: center; animation: rotateClockwise 30s linear infinite; }
         .engine-rotate-fast { transform-origin: center; animation: rotateCounter 15s linear infinite; }
         .engine-pulse { animation: pulseSoft 4s ease-in-out infinite; }
@@ -119,36 +110,19 @@ const ProcessEngine: React.FC = () => {
           </g>
         )}
 
-        {/* --- STAGE 1: CAPTURE (Extraction / Crystallization) --- */}
+        {/* --- STAGE 1: CAPTURE (Extraction) --- */}
         <g transform={`translate(${c1.x}, ${c1.y})`}>
-          {/* Subtle Outer Pulse */}
-          <circle r="90" fill="none" stroke="#b8860b" strokeWidth="0.5" className="circle-pulsate" />
+          <circle r="80" fill="none" stroke="#b8860b" strokeWidth="0.5" className="circle-pulsate" />
+          <circle r="40" fill="none" stroke="#b8860b" strokeWidth="0.5" className="circle-pulsate-delayed" />
 
-          {/* 3D ISOMETRIC CRYSTALLIZATION VISUAL */}
-          <g transform="translate(0, -20)">
-            {/* The Ethereal Layer (Thoughts) */}
-            <g className="animate-pulse" style={{ animation: 'flicker 3s ease-in-out infinite' }}>
-              <path d="M-30,-40 Q0,-60 30,-40 M-20,-50 Q0,-70 20,-50" stroke="#fdfbf7" strokeWidth="0.5" fill="none" opacity="0.3" />
-              <circle cx="0" cy="-55" r="1.5" fill="#fdfbf7" opacity="0.4" />
-            </g>
-
-            {/* The Extraction Pillar (Drafting Lines) */}
-            <g opacity="0.2" style={{ strokeDasharray: '100', animation: 'architectDraw 4s ease-in-out infinite' }}>
-              <line x1="-15" y1="-40" x2="-15" y2="10" stroke="#cd7f32" strokeWidth="0.5" />
-              <line x1="15" y1="-40" x2="15" y2="10" stroke="#cd7f32" strokeWidth="0.5" />
-              <line x1="0" y1="-45" x2="0" y2="15" stroke="#cd7f32" strokeWidth="0.5" />
-            </g>
-
-            {/* The Systemic Base (The Asset / The Stack) */}
-            <g transform="translate(0, 20)">
-              {/* Isometric Cube / Base */}
-              <path d="M0,-15 L20,-5 L20,15 L0,25 L-20,15 L-20,-5 Z" fill="none" stroke="#b8860b" strokeWidth="1" opacity="0.8" />
-              <path d="M0,5 L20,-5 M0,5 L-20,-5 M0,5 L0,25" fill="none" stroke="#b8860b" strokeWidth="0.5" opacity="0.4" />
-              <circle r="4" fill="#b8860b" filter="url(#glow)" opacity="0.6" className="animate-pulse" />
-            </g>
+          <g className="engine-rotate origin-center">
+            <line x1="-90" y1="0" x2="90" y2="0" stroke="#b8860b" strokeWidth="0.5" opacity="0.2" />
+            <circle cx="90" cy="0" r="1.5" fill="#b8860b" />
+            <circle cx="-90" cy="0" r="1.5" fill="#b8860b" />
           </g>
 
-          <text y="120" textAnchor="middle" className="text-meta !text-[8px] !fill-white/40 uppercase tracking-widest font-bold">Crystallization</text>
+          <path d="M-8,-8 L8,8 M-8,8 L8,-8" stroke="#fdfbf7" strokeWidth="0.5" opacity="0.4" />
+          <text y="120" textAnchor="middle" className="text-meta !text-[8px] !fill-white/20 uppercase tracking-widest">Capture</text>
         </g>
 
         {/* --- STAGE 2: MULTIPLIER (Main Engine) --- */}
