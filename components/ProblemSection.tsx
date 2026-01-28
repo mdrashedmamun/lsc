@@ -22,6 +22,15 @@ const ProblemSection: React.FC = () => {
           </div>
         </ScrollReveal>
 
+        {/* Connecting Line - Clarifies the logic jump */}
+        <ScrollReveal>
+          <div className="mb-16 md:mb-24">
+            <p className="text-body-pro !text-cream/60 max-w-2xl">
+              When everything depends on you, the same three breakdowns show up again and again.
+            </p>
+          </div>
+        </ScrollReveal>
+
         {/* Editorial Problem Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 hairline-t">
           <ProblemChunk
