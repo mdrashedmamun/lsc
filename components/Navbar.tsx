@@ -55,7 +55,7 @@ const Navbar: React.FC = () => {
     <>
       <header className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${scrolled ? 'bg-emerald-950/95 backdrop-blur-md h-20 border-b border-white/10' : 'bg-transparent h-24'}`}>
         <div className="max-w-7xl mx-auto px-6 lg:px-10 h-full flex items-center justify-between">
-          <div 
+          <div
             className="flex items-center gap-3 cursor-pointer group"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
@@ -65,15 +65,15 @@ const Navbar: React.FC = () => {
               </svg>
             </div>
             <h1 className="text-lg md:text-xl font-black tracking-tight text-cream uppercase font-display">
-              LeverageStack
+              Leverage Stack
             </h1>
           </div>
 
           <nav className="hidden lg:flex items-center gap-10">
             <a href="#services" onClick={(e) => handleNavClick(e, '#services')} className="text-xs font-bold uppercase tracking-widest text-cream/60 hover:text-bronze-metallic transition-colors focus-visible:ring-2 focus-visible:ring-bronze-metallic outline-none">Engagement</a>
             <a href="#the-process" onClick={(e) => handleNavClick(e, '#the-process')} className="text-xs font-bold uppercase tracking-widest text-cream/60 hover:text-bronze-metallic transition-colors focus-visible:ring-2 focus-visible:ring-bronze-metallic outline-none">The Process</a>
-            <a 
-              href={BOOKING_LINK} 
+            <a
+              href={BOOKING_LINK}
               onClick={(e) => { e.preventDefault(); scrollToSection(BOOKING_LINK); }}
               className="bg-bronze-metallic hover:bg-bronze-dark text-emerald-950 px-6 py-2.5 rounded-sm text-xs font-bold uppercase tracking-wider transition-all shadow-lg active:scale-95 inline-block text-center focus-visible:ring-2 focus-visible:ring-white outline-none"
             >
@@ -81,7 +81,7 @@ const Navbar: React.FC = () => {
             </a>
           </nav>
 
-          <button 
+          <button
             className="lg:hidden p-2 text-cream focus-visible:ring-2 focus-visible:ring-bronze-metallic outline-none"
             onClick={() => setIsOpen(true)}
             aria-label="Open Menu"
@@ -103,7 +103,7 @@ const Navbar: React.FC = () => {
                 </svg>
               </div>
               <h1 className="text-xl font-black tracking-tight text-cream uppercase font-display">
-                LeverageStack
+                Leverage Stack
               </h1>
             </div>
             <button onClick={() => setIsOpen(false)} className="text-cream p-2">

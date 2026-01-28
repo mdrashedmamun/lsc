@@ -21,53 +21,52 @@ const PricingSection: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 hairline">
           <PricingPanel
             title="FOUNDATION"
-            tag="EMAIL AUTHORITY"
-            whoFor="For founders who need their expertise captured and their first AI-driven funnel in place."
+            tag="AUTHORITY CORE"
+            whoFor="For founders who need their expertise extracted and turned into their first compounding content library."
             deliverables={[
-              "90-minute expertise extraction session",
-              "4 long-form email newsletters per month",
-              "4 short-form email newsletters per month",
-              "4 subject-matter expert interviews per month",
-              "Monthly strategy call",
-              "Complete email execution (writing, editing, scheduling)",
-              "AI-driven follow-up funnel (designed and implemented)",
-              "Email performance tracking and reporting",
-              "6-month commitment"
+              "90-minute monthly extraction session",
+              "1 high-leverage 'Pillar' per week (Ghostwritten)",
+              "Multi-channel distribution (LinkedIn/Email)",
+              "Weekly strategic alignment call",
+              "Founder-to-Content logic mapping",
+              "Complete execution (Writing, Editing, Publishing)",
+              "AI-driven follow-up funnel implementation",
+              "6-month commitment",
+              "Success: Your thinking is usable without you."
             ]}
           />
           <PricingPanel
             title="GROWTH ENGINE"
-            tag="OPERATIONAL SCALE"
+            tag="SYSTEMIC SCALE"
             isPopular
-            whoFor="For teams who need email scale and smarter funnel mechanics."
+            whoFor="For teams who need to move from 'one-off posting' to a high-frequency authority system."
             deliverables={[
               "Everything in Foundation",
-              "8 long-form email newsletters per month",
-              "4 short-form email newsletters per month",
-              "4 subject-matter expert interviews per month",
-              "Monthly strategy call",
-              "Quarterly custom email asset (lead magnet, nurture sequence, or email course)",
-              "AI-driven lead qualification and routing funnel",
-              "Performance analytics dashboard (updated weekly)",
-              "Ongoing optimization and strategic oversight",
-              "6-month commitment"
+              "2 high-leverage 'Pillars' per week (Ghostwritten)",
+              "Expanded distribution (Personal Brand + Company)",
+              "Daily subject-matter expert extraction",
+              "Automated lead qualification funnel",
+              "Full AI execution layer (multi-channel logic)",
+              "Performance analytics & ROI tracking",
+              "6-month commitment",
+              "Success: Content runs consistently without founder chasing."
             ]}
           />
           <PricingPanel
             title="MARKET LEADER"
             tag="FULL EXECUTION"
-            whoFor="For established businesses who want full execution—no founder involvement."
+            whoFor="For established businesses who want the entire system built and run on autopilot."
             deliverables={[
               "Everything in Growth Engine",
-              "Comprehensive industry research and reports",
-              "Editorial content derived from research",
-              "Original data analysis and insight development",
-              "Professional design and data visualization",
-              "Full AI execution layer across sales and operations",
-              "Automated email education and nurture systems",
+              "Comprehensive custom research & original reports",
+              "Editorial strategy derived from original data",
+              "Partner-level strategic oversight",
+              "Professional design & custom data visualizers",
+              "Full AI automation of internal sales/ops routing",
+              "Quarterly commitment — we run the system for you",
               "Dedicated execution team",
-              "Partner-level strategy support",
-              "Quarterly engagement — we run the system for you"
+              "Zero founder involvement required",
+              "Success: You are no longer the bottleneck for growth."
             ]}
           />
         </div>

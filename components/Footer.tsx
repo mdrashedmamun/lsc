@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
           <div className="md:col-span-6">
             <div className="flex items-center gap-4 text-bronze-metallic mb-8">
               <h2 className="text-2xl font-black text-cream uppercase tracking-tight font-sans">
-                LeverageStack
+                Leverage Stack
               </h2>
             </div>
             <p className="text-body-pro max-w-sm">
@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
 
         <div className="pt-10 hairline-t flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-meta !text-[8px] !text-white/20">
-            © 2024 LeverageStack. All rights reserved.
+            © 2025 Leverage Stack. All rights reserved.
           </p>
           <p className="text-meta !text-[8px] !text-white/20">
             Built for Compounding Leverage.

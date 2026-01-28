@@ -1,18 +1,18 @@
 import React from 'react';
 import ScrollReveal from './ScrollReveal';
 import { scrollToSection, BOOKING_LINK } from './Navbar';
-import ProcessEngine from './ProcessEngine';
+import ProcessStory from './ProcessStory';
 
 const SolutionSection: React.FC = () => {
   return (
     <section id="the-process" className="bg-emerald-950 pb-32 lg:pb-64 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
 
-        {/* THE ENGINE VISUAL - Refined to bridge the pivot */}
+        {/* THE PROCESS STORY - The Belief Anchor */}
         <ScrollReveal>
-          <div className="relative w-full aspect-[3/4] md:aspect-[21/9] min-h-[600px] md:min-h-[700px] flex items-center justify-center mb-32 md:mb-56">
-            <ProcessEngine />
-            <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_50%_50%,rgba(184,134,11,0.15)_0%,transparent_70%)]"></div>
+          <div className="relative w-full min-h-[500px] flex flex-col items-center justify-center mb-40 md:mb-56 pt-24">
+            <ProcessStory />
+            <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_50%_50%,rgba(184,134,11,0.08)_0%,transparent_70%)]"></div>
           </div>
         </ScrollReveal>
 

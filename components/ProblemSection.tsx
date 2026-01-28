@@ -1,12 +1,13 @@
 import React from 'react';
 import ScrollReveal from './ScrollReveal';
+import ArtifactImage from './ArtifactImage';
 
 const ProblemSection: React.FC = () => {
   return (
     <section id="problem" className="relative pt-48 pb-0 px-6 bg-emerald-950">
       <div className="max-w-7xl mx-auto">
         <ScrollReveal>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-20 mb-40 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-20 mb-12 items-start">
             <div>
               <span className="text-meta mb-8 block">The Friction</span>
               <h2 className="text-h2 text-cream">
@@ -55,13 +56,22 @@ const ProblemSection: React.FC = () => {
           <div className="text-center py-56 hairline-t relative overflow-hidden">
             <div className="max-w-4xl mx-auto px-6">
               <h3 className="text-h2 text-cream mb-16">
-                That’s why we <br className="hidden sm:block" /> built <span className="italic text-bronze-metallic">Stack.</span>
+                This is exactly what <br className="hidden sm:block" /> breaks when a business <span className="italic text-bronze-metallic">depends on its founder.</span>
               </h3>
               <p className="text-body-pro !text-cream/70 max-w-2xl mx-auto">
-                You’ve built a real business. Now we turn your expertise into two business levers that keep working while you focus where you want — <span className="text-cream font-medium">not where you’re forced to.</span>
+                You’ve built a real business. Now your expertise needs to become the <span className="text-cream font-medium">lever that keeps working</span> while you focus where you want — not where you’re forced to.
               </p>
             </div>
           </div>
+        </ScrollReveal>
+
+        {/* Editorial Artifact - Proof of Execution */}
+        <ScrollReveal>
+          <ArtifactImage
+            src="/editorial_artifact.png"
+            alt="Sample editorial content structure"
+            caption="The structure behind every authority-building asset we produce."
+          />
         </ScrollReveal>
       </div>
     </section>

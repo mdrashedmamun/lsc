@@ -52,11 +52,18 @@ const ProcessEngine: React.FC = () => {
           50% { opacity: 0.5; }
           100% { stroke-dashoffset: 0; opacity: 0.2; }
         }
-        .engine-rotate { transform-origin: center; animation: rotateClockwise 30s linear infinite; }
-        .engine-rotate-fast { transform-origin: center; animation: rotateCounter 15s linear infinite; }
-        .engine-pulse { animation: pulseSoft 4s ease-in-out infinite; }
-        .circle-pulsate { transform-origin: center; animation: circlePulse 6s ease-in-out infinite; }
-        .circle-pulsate-delayed { transform-origin: center; animation: circlePulse 6s ease-in-out infinite 3s; }
+        @keyframes sway {
+          0%, 100% { transform: rotate(-1deg) translateY(0px); }
+          50% { transform: rotate(1deg) translateY(-2px); }
+        }
+        @keyframes echoPulse {
+          0% { transform: scale(1); opacity: 0.4; }
+          100% { transform: scale(2); opacity: 0; }
+        }
+        .engine-rotate { transform-origin: center; animation: rotateClockwise 45s linear infinite; }
+        .engine-rotate-fast { transform-origin: center; animation: rotateCounter 22s linear infinite; }
+        .engine-sway { animation: sway 6s ease-in-out infinite; }
+        .echo-ring { transform-origin: center; animation: echoPulse 4s cubic-bezier(0.23, 1, 0.32, 1) infinite; }
         
         .flow-line { 
           stroke-dasharray: 4 6; 
@@ -144,6 +151,22 @@ const ProcessEngine: React.FC = () => {
               {/* Isometric Cube / Base */}
               <path d="M0,-15 L20,-5 L20,15 L0,25 L-20,15 L-20,-5 Z" fill="none" stroke="#b8860b" strokeWidth="1" opacity="0.8" />
               <path d="M0,5 L20,-5 M0,5 L-20,-5 M0,5 L0,25" fill="none" stroke="#b8860b" strokeWidth="0.5" opacity="0.4" />
+
+              {/* Stacked-Line Motif (Signals "Written Logic") */}
+              <g opacity="0.3">
+                <line x1="-12" y1="-6" x2="12" y2="4" stroke="#fdfbf7" strokeWidth="0.5" />
+                <line x1="-12" y1="-2" x2="12" y2="8" stroke="#fdfbf7" strokeWidth="0.5" />
+                <line x1="-12" y1="2" x2="12" y2="12" stroke="#fdfbf7" strokeWidth="0.5" />
+                <line x1="-12" y1="6" x2="12" y2="16" stroke="#fdfbf7" strokeWidth="0.5" />
+              </g>
+
+              {/* Tiny Grid Texture (Subtle Signal) */}
+              <g opacity="0.1">
+                <circle cx="-5" cy="5" r="0.5" fill="#fdfbf7" />
+                <circle cx="5" cy="9" r="0.5" fill="#fdfbf7" />
+                <circle cx="0" cy="12" r="0.5" fill="#fdfbf7" />
+              </g>
+
               <circle r="4" fill="#b8860b" filter="url(#glow)" opacity="0.6" className="animate-pulse" />
             </g>
           </g>
@@ -152,34 +175,39 @@ const ProcessEngine: React.FC = () => {
         </g>
 
         {/* --- STAGE 2: MULTIPLIER (Main Engine) --- */}
-        <g transform={`translate(${c2.x}, ${c2.y})`}>
+        <g transform={`translate(${c2.x}, ${c2.y})`} className="engine-sway origin-center">
           <circle r="140" fill="none" stroke="#b8860b" strokeWidth="1" opacity="0.1" />
 
-          {/* Inner Geometries */}
-          <g className="engine-rotate origin-center">
-            <rect x="-60" y="-60" width="120" height="120" fill="none" stroke="#b8860b" strokeWidth="1" opacity="0.4" />
-            <circle cx="60" cy="60" r="3" fill="#b8860b" />
-            <circle cx="-60" cy="-60" r="3" fill="#b8860b" />
+          {/* Inner Geometries - Subtle Asymmetry & Autonomous Motion */}
+          <g className="engine-rotate origin-center" style={{ animationDuration: '47s' }}>
+            <rect x="-62" y="-58" width="124" height="116" fill="none" stroke="#b8860b" strokeWidth="1" opacity="0.4" />
+            <circle cx="62" cy="58" r="3" fill="#b8860b" />
+            <circle cx="-62" cy="-58" r="3" fill="#b8860b" />
           </g>
 
-          <g className="engine-rotate-fast origin-center">
+          <g className="engine-rotate-fast origin-center" style={{ animationDuration: '23s' }}>
             <circle r="90" fill="none" stroke="#fdfbf7" strokeWidth="0.5" strokeDasharray="3 6" opacity="0.25" />
-            <rect x="-45" y="-45" width="90" height="90" fill="none" stroke="#fdfbf7" strokeWidth="1" opacity="0.2" />
+            <rect x="-43" y="-47" width="86" height="94" fill="none" stroke="#fdfbf7" strokeWidth="1" opacity="0.2" />
           </g>
 
-          <g className="engine-pulse origin-center">
+          <g className="origin-center" style={{ animation: 'pulseSoft 5s ease-in-out infinite' }}>
             <circle r="6" fill="#b8860b" filter="url(#glow)" />
           </g>
 
           <text y="185" textAnchor="middle" className="text-meta !text-[10px] !fill-white/30 tracking-[0.3em]">The System</text>
         </g>
 
-        {/* --- STAGE 3: YIELD (Continuous Output) --- */}
+        {/* --- STAGE 3: YIELD (Continuous Output / Compounding) --- */}
         <g transform={`translate(${c3.x}, ${c3.y})`}>
           <circle r="80" fill="none" stroke="#b8860b" strokeWidth="1" className="circle-pulsate" />
 
+          {/* Trailing Echo Rings (Signals "Leverage") */}
+          <circle r="60" fill="none" stroke="#b8860b" strokeWidth="0.5" className="echo-ring" style={{ animationDelay: '0s' }} />
+          <circle r="60" fill="none" stroke="#b8860b" strokeWidth="0.5" className="echo-ring" style={{ animationDelay: '1.3s' }} />
+          <circle r="60" fill="none" stroke="#b8860b" strokeWidth="0.5" className="echo-ring" style={{ animationDelay: '2.6s' }} />
+
           <g className="engine-rotate origin-center">
-            {/* Refined Infinity Loop Path */}
+            {/* Refined Infinity Loop Path - Now as a symbolic leverage flow */}
             <path
               d="M -45 0 C -45 -30 -15 -30 0 0 C 15 30 45 30 45 0 C 45 -30 15 -30 0 0 C -15 30 -45 30 -45 0"
               fill="none"
@@ -189,7 +217,6 @@ const ProcessEngine: React.FC = () => {
             />
           </g>
 
-          <text y="2" dominantBaseline="middle" textAnchor="middle" className="text-3xl !fill-bronze-metallic" opacity="0.75">∞</text>
           <text y="120" textAnchor="middle" className="text-meta !text-[8px] !fill-white/30 uppercase tracking-widest">Compounding</text>
         </g>
 
