@@ -50,27 +50,54 @@ const ProblemSection: React.FC = () => {
 
         {/* Bridge - Lead + What You've Tried */}
         <ScrollReveal>
-          <div className="py-24 md:py-28 hairline-t">
-            <div className="max-w-4xl">
-              <p className="text-body-pro !text-cream/70 max-w-3xl mb-8 text-balance">
+          <div className="py-24 md:py-28 hairline-t grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            
+            {/* Text Side */}
+            <div className="max-w-xl">
+              <p className="text-body-pro !text-cream/70 max-w-3xl mb-12 text-balance leading-relaxed">
                 Now your expertise needs to become the <span className="text-cream font-medium">lever that keeps working</span> while you focus where you want — not where you're forced to.
               </p>
-              <p className="text-body-pro !text-cream/50 mb-4">
-                You've tried the usual paths.
-              </p>
-              <p className="text-body-pro !text-cream/50 mb-8">
-                Writers. Tools. Systems.
-              </p>
-              <p className="text-body-pro !text-cream/80 mb-6 text-balance">
-                They all fail for the same reason: they miss how <span className="italic text-cream">you</span> actually think.
-              </p>
-              <p className="text-body-pro !text-cream/80 max-w-3xl mb-3 text-balance">
-                Generic writers don't understand your frameworks. Off-the-shelf tools can't handle your buyer context.
-              </p>
-              <p className="text-body-pro !text-cream/80 max-w-3xl text-balance">
-                We combine both: your thinking, crystallized by expert ghostwriters, then systematized with AI that operates in your domain.
-              </p>
+              
+              <div className="mb-10 pl-4 border-l-2 border-white/10">
+                 <p className="text-body-pro !text-cream/50 mb-2">
+                   You've tried the usual paths.
+                 </p>
+                 <p className="text-body-pro !text-cream/50">
+                   Writers. Tools. Systems.
+                 </p>
+              </div>
+
+              <div className="space-y-6">
+                 <p className="text-body-pro !text-cream/90 text-balance">
+                  They all fail for the same reason: they miss how <span className="italic text-cream">you</span> actually think.
+                </p>
+                <p className="text-body-pro !text-cream/80 text-balance">
+                  Generic writers don't understand your frameworks. Off-the-shelf tools can't handle your buyer context.
+                </p>
+                
+                <div className="mt-8 pt-8 border-t border-white/5">
+                    <p className="text-body-pro !text-cream text-balance font-medium">
+                      We combine both: your thinking, crystallized by expert ghostwriters, then systematized with AI that operates in your domain.
+                    </p>
+                </div>
+              </div>
             </div>
+
+            {/* Visual Side */}
+            <div className="mt-12 lg:mt-0 flex justify-center lg:justify-end">
+                 <div className="relative w-full max-w-md aspect-square rounded-2xl overflow-hidden shadow-2xl shadow-black/40 ring-1 ring-white/5 group">
+                     {/* @ts-ignore */}
+                     <img 
+                        src="/system-visual.png" 
+                        alt="Systematized Intelligence" 
+                        className="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000 ease-out"
+                     />
+                     {/* Overlay for integration */}
+                     <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/80 via-emerald-950/20 to-transparent pointer-events-none"></div>
+                     <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl pointer-events-none"></div>
+                </div>
+            </div>
+
           </div>
         </ScrollReveal>
       </div>

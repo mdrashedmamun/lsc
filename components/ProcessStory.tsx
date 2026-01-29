@@ -25,8 +25,8 @@ const ProcessStory: React.FC = () => {
                         <p className="text-body-pro !text-base text-cream/90 mb-6">
                             Your expertise, captured and clarified.
                         </p>
-                        <p className="text-meta !text-[11px] !text-white/40 leading-relaxed max-w-xs">
-                            We extract how you think, explain, and sell — then turn it into written assets that work without you.
+                        <p className="text-body-pro !text-sm !text-cream/60 leading-relaxed max-w-xs">
+                            We extract how you think, explain, and sell—then turn it into written assets that work without you.
                         </p>
                     </div>
 
@@ -39,10 +39,9 @@ const ProcessStory: React.FC = () => {
                         <p className="text-body-pro !text-base text-cream/90 mb-6">
                             Authority and execution, working together.
                         </p>
-                        <div className="text-meta !text-[11px] !text-white/40 leading-relaxed max-w-xs space-y-1">
-                            <p>Your thinking is published.</p>
-                            <p>AI workflows move work forward without you.</p>
-                        </div>
+                        <p className="text-body-pro !text-sm !text-cream/60 leading-relaxed max-w-xs">
+                            Your thinking is published automatically. AI workflows move deals forward—so you don't have to push.
+                        </p>
                     </div>
 
                     {/* COMPOUNDING */}
@@ -54,11 +53,9 @@ const ProcessStory: React.FC = () => {
                         <p className="text-body-pro !text-base text-cream/90 mb-6">
                             The work keeps working.
                         </p>
-                        <div className="text-meta !text-[11px] !text-white/40 leading-relaxed max-w-xs space-y-2">
-                            <p>Prospects arrive informed.</p>
-                            <p>Deals move without chasing.</p>
-                            <p>Growth no longer resets.</p>
-                        </div>
+                        <p className="text-body-pro !text-sm !text-cream/60 leading-relaxed max-w-xs">
+                            Prospects arrive informed. Deals move without constant chasing. Growth accumulates instead of resetting every month.
+                        </p>
                     </div>
                 </div>
             </div>
